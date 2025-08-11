@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>With</title>
+</head>
+<body>
+    <script>
+
+        const name = {
+            firstName : "Nuraisi",
+            middleName : "Maba",
+            lastName : "Alhuda"
+        }
+
+        console.log(name.firstName)
+        console.log(name.middleName)
+        console.log(name.lastName)
+
+        const firstName = "Budi"
+        const lastName = "Nugraha"
+
+        console.log(firstName)
+
+        with (name) {
+            console.log(firstName)
+            console.log(middleName)
+            console.log(lastName)
+        }
+
+    </script>    
+</body>
+</html>

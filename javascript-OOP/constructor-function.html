@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor Function</title>
+</head>
+<body>
+    <script>
+
+        // membuat constructor function versi lama
+        function Person() {
+            this.firstName = "" // menambahkan / membuat properti di semua object yang dibuat dari constructor function (this)
+            this.lastName = ""
+            this.sayHello = function (name) {
+                console.log(`Hello ${name}, my name is ${this.firstName}`) // sayhello (method)
+            }
+        }
+
+        // membuat object dari constructor function (new)
+        const huda = new Person()
+        huda.firstName = "Huda"
+        huda.lastName = "Ahmad"
+        huda.sayHello("Budi")
+
+        const nuraisi = new Person()
+        nuraisi.firstName = "Nuraisi"
+        nuraisi.lastName = "Maba"
+        huda.sayHello("Daniyal")
+
+        console.log(huda)
+        console.log(nuraisi)
+
+        // membuat constructor function versi lama menggunakan parameter
+        function Person2(firstName, lastName) { // parameter
+            this.firstName = firstName // menambahkan / membuat properti di semua object yang dibuat dari constructor function (this)
+            this.lastName = lastName // mengambil nilai dari sebuah parameter function
+            this.sayHello2 = function (name) {
+                console.log(`Hello ${name}, my name is ${this.firstName}`) // sayhello (method)
+            }
+        }
+
+        // membuat object dari class (new)
+        const huda2 = new Person2("Huda", "Ahmad") // memanggil function
+        huda2.sayHello2("Budi")
+
+        const nuraisi2 = new Person2("Nuraisi", "Maba") // memanggil function
+        huda2.sayHello2("Daniyal")
+
+        console.log(huda2)
+        console.log(nuraisi2)
+
+        // properti = data yang dimiliki oleh sebuah object
+        // huda dan nuraisi = variabel yang menyimpan object new Person() yang dibuat dari function Person
+        // method = function didalam sebuah object
+        // this.firstName = properti
+        // new Person() = object (biasa disebut instance)
+
+    </script>
+</body>
+</html>

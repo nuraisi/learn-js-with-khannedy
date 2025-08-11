@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Private Method</title>
+</head>
+<body>
+    
+    <script>
+
+        class Person {
+
+            say(name) { // say ; public method (bisa diakses diluar class, example : huda.say())
+                if (name) {
+                    this.#sayWithName(name) // akses ke private method 
+                } else {
+                    this.#sayWithoutName() // akses ke private method
+                }
+            }
+
+            #sayWithName(name) { // private method ; (hanya bisa diakses didalam class)
+                console.log(`Hello ${name}`) 
+            }
+
+            #sayWithoutName() { // private method
+                console.log(`Hello`)
+            }
+
+        }
+
+        const huda = new Person()
+        huda.say("Huda")
+
+    </script>
+
+</body>
+</html>

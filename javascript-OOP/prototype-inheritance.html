@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype Inherintance</title>
+</head>
+<body>
+    <script>
+
+      
+        function Employee(name) {
+            this.name = name 
+        }
+
+        function Manager(name) {
+            this.name = name
+        }
+
+        //  menjadikan manager sebagai pewaris employee ; Prototype Inheritance yang salah
+        Manager.prototype = Employee.prototype
+
+        // Prototype Inheritance yang benar
+        Manager.prototype = Object.create(Employee.prototype)
+
+        Manager.prototype.sayHello = function (name) {
+            console.log(`Hello ${name}, My name is Manager ${this.name}`)
+        }
+
+        Employee.prototype.sayHello = function (name) {
+            console.log(`Hello ${name}, My name is Employee ${this.name}`)
+        }
+
+        const manager = new Manager("Huda")
+        manager.sayHello("Ahmad")
+
+        const employee = new Employee("Nuraisi")
+        employee.sayHello("Daniyal")
+
+        console.log(manager)
+        console.log(employee)
+
+        // masing-masing function memiliki __proto__, prototipe inheritance salah dikarenakan manager terhubung ke employee,
+        // harusnya __proto__ manager terhubung ke employee
+
+    </script>
+</body>
+</html>

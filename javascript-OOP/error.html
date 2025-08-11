@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Method</title>
+</head>
+<body>
+    
+    <script> 
+
+        class MathUtil {
+            static sum(...numbers) {
+
+                if (numbers.length === 0) {
+                    throw new Error(`Total Parameter harus lebih dari 0`)
+                }
+
+                let total = 0
+                for (const number of numbers) {
+                    total += number
+                }
+
+                return total
+            }
+        }
+
+        console.log("Huda")
+        console.log(MathUtil.sum())
+        const result = MathUtil.sum(1, 1, 1, 1, 1)
+        console.log(result)
+
+        // throw untuk melempar (menghasilkan) error secara manual, untuk mengetahui ada sesuatu yang salah
+        // new Error untuk membuat object error dengan pesan tertentu 
+
+    </script>
+
+</body>
+</html>

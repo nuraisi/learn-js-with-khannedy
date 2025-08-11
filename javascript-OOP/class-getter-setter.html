@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Getter Setter</title>
+</head>
+<body>
+    
+    <script>
+
+            class Person {
+                constructor(firstName, lastName) {
+                    this.firstName = firstName
+                    this.lastName = lastName
+                }
+
+                // fullName ; accessor property (menjalankan fungsi yang sudah ada dibelakang layar (getter & setter))
+                get fullName() {
+                    return `${this.firstName} ${this.lastName}`
+                }
+
+                set fullName(value) {
+                    const result = value.split(" ")
+                    this.firstName = result[0]
+                    this.lastName = result[1]
+                }
+            }
+
+            const huda = new Person("Nuraisi", "Alhuda")
+            huda.fullName = "Ahmad Daniyal" // memanggil fungsi setter
+            console.log(huda)
+            console.log(huda.fullName) // memanggil fungsi getter
+
+            // get (getter) = mengambil nilai properti
+            // set (setter) = memodifikasi atau mengatur nilai properti
+
+    </script>
+
+</body>
+</html>

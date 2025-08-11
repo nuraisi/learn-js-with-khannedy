@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stirng Template</title>
+</head>
+<body>
+    <script>
+
+        const name = "Nuraisi Maba Alhuda";
+        const template = `nama : ${name}`;
+
+        console.log(template);
+
+        const nilai = 90;
+        const template2 = `nama : ${name} ; Lulus : ${nilai > 75}`;
+
+        console.log(template2);
+
+        const multiline = `Halo, Nama Saya
+Nuraisi Maba Alhuda,
+Saya suka sekali belajar
+dan beribadah`;
+
+        document.writeln("<pre>")
+        document.writeln(multiline)
+        document.writeln("</pre>")
+
+        const value1 = parseInt("1");
+        const value2 = 1;
+        const sum = value1 + value2;
+
+        document.writeln(`<p>${sum}</p>`); // 2
+
+        // Melakukan konversi string ke number (float atau bil. bulat)
+        document.writeln(`<p>${parseInt("1.1")}</p>`) // 1
+        document.writeln(`<p>${parseFloat("1.1")}</p>`) // 1.1
+        document.writeln(`<p>${Number("1.1")}</p>`) // 1.1
+
+        // Number to String
+        const a = 1;
+        const b = 1;
+        const total = a.toString() + b.toString();
+        document.writeln(`<p> total : ${total}</p>`) // 11
+
+        document.writeln(`<p>${parseInt("salah")}</p>`); // NaN
+        document.writeln(`<p>${parseFloat("1.1halo")}</p>`); // 1.1
+        document.writeln(`<p>${Number("12halo")}</p>`) // NaN
+        
+
+        const first = Number("salah"); // NaN
+        const second = 100;
+
+        const total2 = first + second;
+        document.writeln(`<p>${total2}</p>`) // NaN
+
+        document.writeln(`<p>${isNaN(first)}</p>`)
+        document.writeln(`<p>${isNaN(second)}</p>`)
+        document.writeln(`<p>${isNaN(NaN)}</p>`)
+
+
+    </script>
+</body>
+</html>

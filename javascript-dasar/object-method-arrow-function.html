@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Method Arrow Function</title>
+</head>
+<body>
+
+    <script>
+
+    const person = {
+    name : "Nuraisi",
+    sayHello :(name) => {
+        console.log(this)
+        console.log(`Hello ${name}`)
+        }
+    }
+
+    person.sayHello("Huda")
+
+    </script>
+    
+</body>
+</html>

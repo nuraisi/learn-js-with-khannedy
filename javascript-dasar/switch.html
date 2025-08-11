@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+</head>
+<body>
+    <script>
+
+        const nilai = "A";
+
+        switch (nilai) {
+            case "A" : 
+                document.writeln("Wow anda lulus dengan baik")
+                break
+            case "B" : 
+            case "C" :
+                document.writeln("Anda lulus")
+                break
+            case "D" : 
+                document.writeln("Anda tidak lulus")
+            default :
+                document.writeln("Munngkin anda salah jurusan")
+        }
+
+        if (nilai == "A") {
+            document.writeln("Wow Anda lulus dengan nilai A")
+        } else if (nilai == "B" || nilai == "C") {
+            document.writeln("Anda Lulus")
+        } else if (nilai == "D") {
+            document.writeln("Anda tidak lulus")
+        } else {
+            document.writeln("Mungkin anda salah jurusan")
+        }
+
+    </script>
+</body>
+</html>

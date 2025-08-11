@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor Inheritance</title>
+</head>
+<body>
+    <script>
+
+        // membuat constructor inheritance (pewaris)
+        function Employee(firstName) {
+            this.firstName = firstName
+            this.sayHello = function(name) {
+                `Hello ${name}, My name is ${firstName}`
+            }
+        }
+
+        function Manager(firstName, lastName) {
+            Employee.call(this, firstName) // memanggil function Employee (semua properti di employee yang menggunakan this dipanggil (bukan hanya firstName)) ; inheritance
+            this.lastName = lastName
+        }
+
+        const huda = new Manager("Nuraisi", "Alhuda")
+        console.log(huda)
+
+        // function manager mewarisi semua properti dan method employee
+        // inheritance = memanggil parameter dari class lain 
+        // menggunakan this , (koma) karena argumen fungsi
+        // call() = method
+
+    </script>
+</body>
+</html>

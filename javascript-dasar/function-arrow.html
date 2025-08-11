@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Arrow</title>
+</head>
+<body>
+    <script>
+        
+        // pada arrow function tidak memerlukan 'function'
+
+        // ini jika menggunakan variabel di dalam body (beberapa baris)
+        const sayHello = (name) => {
+            const say = `hello ${name}`
+            console.log(say)
+        }
+
+        // ini jika tanpa menggunakan variabel di dalam body (satu baris)
+        const sayHello2 = (name) => console.log(`Hello ${name}`)
+
+        sayHello2("Huda")
+        
+
+        const sum = (first, second) => first + second;
+
+        console.log(sum(100,100))
+
+        const sum2 = (first, second) => {
+            return first + second;
+        } 
+
+        console.log(sum2(100,100))
+
+        const sayHello3 = name => first + second;
+
+        console.log(sayHello3(100,100))
+
+    </script>
+</body>
+</html>

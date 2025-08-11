@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kata Kunci This</title>
+</head>
+<body>
+    <script>
+
+        console.log(this);
+
+        function halo() {
+            console.log(this)
+
+            function inner() {
+                console.log(this)
+            }
+
+            inner()
+        }
+
+        halo()
+
+        const person = {
+            name : "Nuraisi",
+            sayHello : function(value) {
+                console.log(`hello ${value} my name is ${this.name}`) // this = mengambil value pada properti
+            }
+        }
+
+        person.sayHello("Huda")
+
+    </script>
+</body>
+</html>

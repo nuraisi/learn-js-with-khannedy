@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+    <script>
+
+        function Person(firstName, lastName) {
+            this.firstName = firstName
+            this.lastName = lastName
+            this.sayHello = function (name) {
+                console.log(`Hello ${name}, my name is ${this.firstName}`)
+            }
+        }
+
+        // masuk di semua instance object dari constructor function Person (masuk di prototype)
+        Person.prototype.sayBye = function() {
+            console.log(`Say Goodbye`)
+        }
+
+        Person.prototype.run = function() {
+            console.log(`${this.firstName} is running`)
+        }
+
+        const huda = new Person("Huda", "Ahmad")
+        // hanya masuk di instance object dari huda (masuk di method)
+        // di variabel huda akan ditampilkan 'Sampai Jumpa' karena masuk di object duluan
+        huda.sayBye = function() {
+            console.log(`Sampai Jumpa`)
+        }
+
+        const nuraisi = new Person("Nuraisi", "Maba")
+
+        console.log(huda)
+        console.log(nuraisi)
+        huda.sayBye()
+        huda.run()
+
+        // javascript mencari method di object dulu baru prototype
+        // chain prototype (rantai prototype) = huda (instance) > Person.prototype > Object.prototype > null
+
+    </script>
+</body>
+</html>

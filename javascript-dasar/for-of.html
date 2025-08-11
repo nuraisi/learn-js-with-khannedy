@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Of</title>
+</head>
+<body>
+    <script>
+
+        const names = ["Nuraisi", "Maba", "Alhuda"]
+
+        for (const name of names) {
+            document.writeln(`<p>${name}</p>`)
+        }
+
+        const peoplee = {
+            firstName : "Nuraisi",
+            lastName : "Alhuda"
+        }
+        for (const people of peoplee) {
+            document.writeln(`<p>${people}</p>`)
+        } // error karena tipe data object bukan iterable
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    <script>
+
+    {
+        // destructuring pada array
+
+        const names = ["Nuraisi", "Maba", "Alhuda", "Ahmad", "Daniyal"]
+        const [firstName, middleName, lastName, ...other] = names
+
+        console.log(firstName)
+        console.log(lastName)
+        console.log(other)
+
+    }
+
+    {
+
+        // destructuring pada object
+
+        const person = {
+            firstName : "Abdika",
+            lastName : "Taslih",
+            address : {
+                street : "Jl. Mangga",
+                city : "Surabaya",
+                country : "Indonesia"
+            },
+            hobby : "Game",
+            channel : "Nuraisi Maba Alhuda"
+        }
+
+        const {firstName, lastName, ...other} = person
+        console.log(firstName)
+        console.log(lastName)
+        console.log(other)
+
+        // destructuring nested object
+
+        // const {firstName2, lastName2, address {street, city, country}, ..other2} = person
+        // console.log(firstName2)
+        // console.log(lastName2)
+        // console.log(street)
+        // console.log(city)
+        // console.log(country)
+
+    }
+
+    {
+
+        // destructuring di function parameter (object)
+
+        function displayPerson({firstName, middleName, lastName}) {
+            console.log(firstName)
+            console.log(middleName)
+            console.log(lastName)
+        }
+
+        const person = {
+            firstName : "Nuraisi",
+            middleName : "Maba",
+            lastName : "Alhuda"
+        }
+
+        displayPerson(person)
+
+    }
+    
+    {
+
+        // desctructuring di function parameter (array)
+
+        function sum([first, second]) {
+            return first + second
+        }
+
+        console.log(sum([10, 10]))
+        console.log(sum([20, 20]))
+
+    }
+
+        // default value pada array
+
+        const names = ["Nursayid", "Abdillah", "Januar"]
+        const [firstName, middleName, lastName = "Eko"] = names
+
+        console.log(firstName)
+        console.log(middleName)
+        console.log(lastName)
+
+    {
+
+        // default value pada object
+
+        const person = {
+            firstName : "Nuraaisii",
+            lastName : "Alhuudaa"
+        }
+
+        const {firstName, lastName, middleName = "Hudaaa"} = person
+        console.log(firstName)
+        console.log(lastName)
+        console.log(middleName)
+
+    }
+
+    {
+
+        // Mengubah nama variabel lain pada object
+
+            const person = {
+            firstName : "Nuraaisii",
+            middleName : "Mabaa",
+            lastName : "Alhuudaa"
+        }
+
+        const {
+            firstName : namaDepan, 
+            lastName : namaBelakang, 
+            middleName : namaTengah = "Hudaaa"} = person
+        console.log(namaDepan)
+        console.log(namaTengah)
+        console.log(namaBelakang)
+
+
+    }
+
+    
+
+    </script>
+</body>
+</html>

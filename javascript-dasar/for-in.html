@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For In</title>
+</head>
+<body>
+    <script>
+
+        const person = {
+            firstName : "Nuraisi",
+            middleName : "Maba",
+            lastName : "Alhuda"
+        }
+
+        for (const property in person) {
+            document.writeln(`<p>${property} : ${person[property]}</p>`)
+        }
+
+        const dataDiri = ["Shofwa", "Aulia", "Mursyidah"]
+
+        for (const index in dataDiri) {
+            document.writeln(`<p>${index} : ${dataDiri[index]}</p>`)
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Method</title>
+</head>
+<body>
+    
+    <script>
+
+        class Person {
+            constructor (name) {
+                this.name = name
+                // implementasi method yang salah karena akan di simpan di instance object (boros memori)
+                this.sayHello = function(name) {
+                    console.log(`Hello ${name}, My name is ${this.name}`)
+                }
+            }
+            // implementasi method yang benar karena disimpan di prototype
+            sayHello(name) {
+                console.log(`Hello ${name}, My name is ${this.name}`)
+            }
+        }
+
+        const huda = new Person("Huda")
+        console.log(huda)
+        huda.sayHello("Adi")
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator In</title>
+</head>
+<body>
+    <script>
+
+        let person = {
+            nama : "Nuraisi",
+            alamat : "Indonesia"
+        }
+
+        if ("nama" in person) {
+            alert(`Halo ${person.nama}`)
+        } else {
+            alert("Halo aja")
+        }
+
+        const mahasiswa = {
+            nama : "Alhuda",
+            kelas : undefined
+        }
+
+        if ("kelas" in mahasiswa) {
+            alert(`Halo ${mahasiswa.kelas}`)
+        } else {
+            alert("Halo aja")
+        }
+
+        const kumpulanNama = ["Nuraisi", null, "Sayangku Shofwa"]
+        if(2 in kumpulanNama) {
+            document.writeln(`Halo ${kumpulanNama[2]}`)
+        } else {
+            document.writeln("Halo ajah")
+        }
+
+    </script>
+</body>
+</html>

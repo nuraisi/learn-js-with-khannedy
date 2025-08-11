@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Inheritance</title>
+</head>
+<body>
+    
+    <script>
+
+        class Employee {
+            sayHello(name) {
+                console.log(`Hello ${name}, My name is ${this.name}`)
+            }
+        }
+
+        class Manager extends Employee { // memanggil function Employee (semua properti di employee) ; inheritance versi modern 
+            sayHello(name) {
+                console.log(`Hello ${name}, My name is ${this.name}`)
+            }
+        }
+
+        const huda = new Employee()
+        huda.name = "Huda"
+        huda.sayHello("Ahmad")
+
+        const nuraisi = new Manager()
+        nuraisi.name = "Nuraisi"
+        nuraisi.sayHello("Ahmad")
+
+        console.log(huda)
+        console.log(nuraisi)
+
+        // extends = pewarisan ; manager mewarisi semua properti dan method employee
+
+    </script>
+
+</body>
+</html>

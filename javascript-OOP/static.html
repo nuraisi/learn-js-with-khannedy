@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Field</title>
+</head>
+<body>
+    <script>
+
+        class Configuration {
+            static name = "Belajar Javascript OOP"
+            static version = 1.0
+            static author = "Nuraisi Alhuda"
+        }
+
+        const config = new Configuration()
+        console.log(config.name) // cara akses yang salah
+
+        Configuration.name = "Nuraisi Maba" // bisa diubah melalui manapun karena bersifat publik akses
+        
+        // cara akses yang benar (static sifatnya global)
+        console.log(Configuration.name)
+        console.log(Configuration.version)
+        console.log(Configuration.author)
+
+        // static digunakan untuk mendefinisikan properti atau method yang dimiliki oleh class itu sendiri
+
+    </script>
+</body>
+</html>

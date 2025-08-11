@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Instanceof</title>
+</head>
+<body>
+    
+    <script>
+
+        class Employee {
+
+        }
+
+        class Manager extends Employee{ // Manager mewarisi properti Employee
+
+        }
+
+        const employee = new Employee()
+        const manager = new Manager()
+
+        // untuk mengetahui jenis tipe data 
+        console.log(typeof employee)
+        console.log(typeof manager)
+
+        // untuk mengetahui apakah object tersebut merupakan instance dari class tertentu
+        console.log(employee instanceof Employee) // true
+        console.log(manager instanceof Manager) // true
+            
+        console.log(manager instanceof Employee) // false / true (jika class Manager extends Employee)
+        console.log(employee instanceof Manager) // false
+
+    </script>
+
+</body>
+</html>

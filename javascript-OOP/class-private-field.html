@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Private Field</title>
+</head>
+<body>
+    
+    <script>
+
+        class Counter {
+            #counter = 0
+
+            increment() {
+                this.#counter++
+            }
+
+            decrement() {
+                this.#counter--
+            }
+
+            get() {
+                return this.#counter
+            }
+        }
+
+        const huda = new Counter()
+        huda.increment() // cara menambah atau mengubah private field
+        huda.increment()
+        huda.increment()
+        console.log(huda.get()) // mengakses private field
+        huda.counter = 100 // tidak mengubah counter, justru menambah properti lain
+        huda.hehehehe = 50
+        console.log(huda)
+
+    </script>
+
+</body>
+</html>

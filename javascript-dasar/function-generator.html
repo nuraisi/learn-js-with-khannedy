@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Generator</title>
+</head>
+<body>
+    <script>
+
+        // function generator tidak bisa di akses index pada data, tidak bisa mengubah value
+
+        function* createNames() {
+            yield "Nuraisi",
+            yield "Maba",
+            yield "Alhuda"
+        }
+
+        const names = createNames()
+        for (const name of names) {
+            console.log(name)
+        }
+        console.log(names[0]) // tidak bisa
+
+        // lazy
+        function* buatGanjil(value) {
+            for(let i = 1; i <= 100; i++) {
+                if (i % 2 === 1) {
+                    yield i
+                }
+            }
+        }   
+
+        // ieger
+        function buatGanjilArray(value) {
+            const result = []
+            for(let i = 1; i <= 100; i++) {
+                if (i % 2 === 1) {
+                    console.log(`Yield ${i}`)
+                    result.push(i)
+                }
+            }
+            return result
+        }
+        
+        const numbers = buatGanjil(100)
+        // for (const number of numbers) {
+        //     console.log(number)
+        // }
+
+        console.log(numbers.next().value)
+        console.log(numbers.next().value)
+        console.log(numbers.next().value)
+
+    </script>
+</body>
+</html>

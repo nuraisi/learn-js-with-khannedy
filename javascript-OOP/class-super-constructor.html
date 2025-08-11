@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Super Constructor</title>
+</head>
+<body>
+    
+    <script>
+
+        class Employee {
+            constructor(firstName) {
+                this.firstName = firstName
+            }
+
+            sayHello(name) {
+                console.log(`Hello ${name}, My name is ${this.firstName}`)
+            }
+        }
+
+        class Manager extends Employee {
+            constructor(firstName, lastName) {
+                super(firstName) // super ; memanggil constructor superclass kedalam subclass
+                this.lastName = lastName
+            }
+
+            sayHello(name) {
+                console.log(`Hello ${name}, My name is ${this.firstName} ${this.lastName}`)
+            }
+        }
+
+        const huda = new Employee("Huda")
+        huda.sayHello("Ahmad")
+
+        const nuraisi = new Manager("Nuraisi", "Alhuda")
+        nuraisi.sayHello("Ahmad")
+
+        console.log(huda)
+        console.log(nuraisi)
+
+        // extends = pewarisan ; manager mewarisi semua properti dan method employee
+        // Employee = parents ; Manager = child
+
+    </script>
+
+</body>
+</html>

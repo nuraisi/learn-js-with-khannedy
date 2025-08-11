@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Public Field</title>
+</head>
+<body>
+    
+    <script>
+
+        class Customer {
+            // field di luar constructor (properti yang memiliki nilai)
+            firstName; 
+            lastName;
+            balance = 0;
+
+            // mengubah nilai field melalui constructor
+            constructor(firstName, lastName) {
+                this.firstName = firstName
+                this.lastName = lastName
+            }
+
+            sayHello() {
+
+            }
+        }
+
+        const huda = new Customer("Nuraisi", "Alhuda")
+        console.log(huda)
+        console.log(huda.firstName) // akses nilai properti firstName milik Customer
+
+        // public artinya bisa diakses dari luar class
+        // private artinya hanya bisa diakses di dalam class 
+
+    </script>
+
+</body>
+</html>
